@@ -8,8 +8,8 @@ import java.util.Optional;
 
 public class CDB extends Investment {
 
-    public CDB(MonetaryAmount qtdeInvestiment, LocalDate startDate, Optional<LocalDate> finishDate) {
-        super(qtdeInvestiment, startDate, finishDate);
+    public CDB(MonetaryAmount qtdeInvestiment, LocalDate startDate, LocalDate finishDate) {
+        super(qtdeInvestiment, startDate, Optional.ofNullable(finishDate));
     }
 
     @Override

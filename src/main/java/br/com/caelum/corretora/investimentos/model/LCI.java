@@ -9,12 +9,12 @@ import java.util.Optional;
 
 public class LCI extends Investment {
 
-    public LCI(MonetaryAmount qtdeInvestiment, LocalDate startDate, Optional<LocalDate> finishDate) {
-        super(qtdeInvestiment, startDate, finishDate);
+    public LCI(MonetaryAmount qtdeInvestiment, LocalDate startDate, LocalDate finishDate) {
+        super(qtdeInvestiment, startDate, Optional.ofNullable(finishDate));
     }
 
     @Override
     public MonetaryAmount calculateTax() {
-        return Money.zero(Monetary.getCurrency("BLR"));
+        return Money.zero(Monetary.getCurrency("BRL"));
     }
 }
